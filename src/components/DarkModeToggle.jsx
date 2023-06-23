@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 export const DarkModeToggle = ({ setDarkTheme, darkTheme }) => {
    return (
-      <div className={`flex w-[70px] h-[25px] ${darkTheme ? 'justify-end' : 'justify-start'} rounded-full p-[5px] cursor-pointer bg-gray-300 dark:bg-gray-700 `} onClick={() => setDarkTheme(!darkTheme)}>
+      <div className={`flex w-[70px] h-[25px] ${darkTheme ? 'justify-end' : 'justify-start'} rounded-full p-[5px] cursor-pointer bg-gray-200 sm:bg-gray-300 dark:bg-gray-700 `} onClick={() => setDarkTheme(!darkTheme)}>
          <motion.div
             layout 
             initial={false}

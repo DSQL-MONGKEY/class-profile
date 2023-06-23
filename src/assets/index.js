@@ -19,7 +19,7 @@ import raka from './raka.png'
 import rama from './rama.png'
 import syarif from './syarif.png'
 import syukri from './syukri.png'
-import yusuf from './yusuf'
+import yusuf from './yusuf.png'
 
 export {  
    close,

@@ -49,7 +49,7 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
                   onClick={() => setToggle(!toggle)}
                   />
 
-                  <div className={`${!toggle ? 'hidden' : 'flex'} p-6 bg-slate-300 dark:bg-zinc-700 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-md -translate-y-5`}>
+                  <div className={`${!toggle ? 'hidden' : 'flex'} p-6 bg-slate-300 dark:bg-zinc-900 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-md -translate-y-5`}>
                      <ul className='list-none flex justify-end items-start flex-col gap-4'>
                         {
                            navLinks.map((link) => (
