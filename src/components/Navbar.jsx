@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { styles } from '../style'
 import { navLinks } from '../constants'
 import { close, menu } from '../assets'
+import { DarkModeToggle } from './DarkModeToggle'
 
 export const Navbar = ({ darkTheme, setDarkTheme }) => {
    const [active, setActive] = useState("")
@@ -28,7 +29,7 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
                   {navLinks.map((link) => (
                      <li 
                         key={link.id} 
-                        className={`${active === link.title ? "text-white" : "text-gray-500"} hover:text-gray-600 dark:hover:text-white text-[18px] font-medium cursor-pointer`}
+                        className={`${active === link.title ? "text-white" : "text-gray-500"} dark:text-slate-200 hover:text-gray-600 dark:hover:text-white text-[18px] font-medium cursor-pointer`}
                         onClick={() => setActive(link.title)}
                         >
                            <a href={`#${link.id}`}>
@@ -37,6 +38,10 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
                      </li>
                   ))}
                </ul>
+               <div className='hidden sm:inline-flex'>
+                  <DarkModeToggle darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
+               </div>
+               
 
                <div className='sm:hidden flex flex-1 justify-end items-center'>
                   <img src={toggle ? close : menu} alt="menu" 
@@ -44,7 +49,7 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
                   onClick={() => setToggle(!toggle)}
                   />
 
-                  <div className={`${!toggle ? 'hidden' : 'flex'} p-6 bg-slate-200 dark:bg-zinc-700 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-md`}>
+                  <div className={`${!toggle ? 'hidden' : 'flex'} p-6 bg-slate-300 dark:bg-zinc-700 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-md -translate-y-5`}>
                      <ul className='list-none flex justify-end items-start flex-col gap-4'>
                         {
                            navLinks.map((link) => (
@@ -61,13 +66,7 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
                               </li>
                            ))
                         }
-                        <button
-                           type='button'
-                           onClick={() => setDarkTheme(!darkTheme)}
-                           className='text-sm font-medium dark:bg-gray-500 dark:text-gray-900 bg-white rounded-full px-2 py-1 hover:shadow-lg w-full'
-                        >
-                           {darkTheme ? 'Dark' : 'Light'}
-                        </button>
+                        <DarkModeToggle darkTheme={darkTheme} setDarkTheme={setDarkTheme} />
                      </ul>
                   </div>
                </div>
