@@ -5,7 +5,7 @@ import { fadeIn, textVariant } from "../utils/motion"
 
 export const About = () => {
    return (
-      <section className={`${styles.section} ${styles.padding} bg-white dark:bg-gray-500`} id="about">
+      <section className={`${styles.section} ${styles.padding} bg-white dark:bg-midnight`} id="about">
          <motion.div variants={textVariant(0.5)}>
             <p className={`${styles.sectionHeadText} font-poppins text-zinc-800 dark:text-slate-200`}>
                Introduction

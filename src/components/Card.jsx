@@ -1,15 +1,35 @@
 import PropTypes from 'prop-types'
+import { styles } from '../style'
 
-export const Card = ({ members, index }) => {
-   
+export const Card = ({ items, name }) => {
+
+  const nameSelected = () => (
+    items.filter((item) => item.name == name).map((named, i) => (
+      <div key={i} className=''>
+        <img 
+        src={named.img} 
+        alt={named.name} 
+        className={styles.imgStyle} 
+        loading='lazy' />
+        <p className={`text-zinc-700 dark:text-slate-300 text-center text-xl font-bold mt-10`}>
+          {named.tagline}
+        </p>
+      </div>
+    ))
+  )
 
   return (
-    <div>Card</div>
+    <div className={`w-[350px] h-[350px] flex flex-col gap-2 justify-center items-center`}>
+      <div className={`image-card`}>
+        {nameSelected()}
+      </div>
+    </div>
   )
 }
 
 
+
 Card.propTypes = {
-   members: PropTypes.array,
-   index: PropTypes.number
+    items: PropTypes.array,
+    name: PropTypes.string
 }

@@ -7,7 +7,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'midnight': '#18122B',
+        'halfnight': '#393053'
+      }
+    },
   },
   plugins: [],
 }

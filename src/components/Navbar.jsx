@@ -14,7 +14,7 @@ export const Navbar = ({ darkTheme, setDarkTheme }) => {
    return (
       <>
          <nav
-            className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 font-poppins font-semibold`}>
+            className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 font-poppins font-semibold bg-white dark:bg-halfnight`}>
             <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
                <Link
                   to='/'
