@@ -25,7 +25,8 @@ export const About = () => {
                , mampu mendesain dan mengimplementasi sistem yang terintegrasi baik software maupun hardware.
             </p> &nbsp; 
             <p>
-               <span className="font-semibold text-sm capitalize">*intinya pengen lulus tepat waktu</span>
+               <span className="font-semibold text-sm capitalize">*intinya pengen lulus tepat waktu</span><br />
+               ga nyusahin orang tua, banggain mereka, dan bisa bermanfaat buat banyak orang.
             </p>
          </motion.div>
       </section>

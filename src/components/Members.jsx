@@ -17,10 +17,10 @@ export const Members = () => {
 
 
   return (
-      <section className={`${styles.sectionAuto} ${styles.padding} bg-white dark:bg-gray-900`}>
+      <section className={`${styles.sectionAuto} ${styles.paddingX} bg-white dark:bg-gray-900`}>
           <motion.p 
           variants={textVariant()} 
-          className={`${styles.heroHeadText} m-5 text-zinc-800 dark:text-slate-200`}>
+          className={`${styles.heroHeadText} text-zinc-800 dark:text-slate-200`}>
             Members
           </motion.p>
 
