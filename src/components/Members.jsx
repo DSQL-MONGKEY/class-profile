@@ -26,13 +26,12 @@ export const Members = () => {
         <div className={`flex justify-center items-center`}>
           <Card items={members} name={currentName} />
         </div>
-        {window.screen.width <= 640 
-        ? 
-        <div>
+
+        <div className={`sm:hidden`}>
           <SelectBox items={members} />
         </div>         
-        : 
-        <div className={`flex flex-wrap gap-3 sm:justify-evenly p-5 rounded-full font-semibold`}>
+
+        <div className={`hidden sm:flex flex-wrap gap-3 sm:justify-evenly p-5 rounded-full font-semibold`}>
           {
             members.map((member, i) => (
               <button 
@@ -47,7 +46,6 @@ export const Members = () => {
             ))
           }
         </div>
-        }
       </section>
   )
 }
