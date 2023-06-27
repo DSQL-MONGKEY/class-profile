@@ -17,7 +17,7 @@ export const Members = () => {
 
 
   return (
-      <section className={`${styles.sectionAuto} ${styles.paddingX} bg-white dark:bg-gray-900`}>
+      <section className={`${styles.sectionAuto} ${styles.paddingX} bg-white dark:bg-gray-900 h-screen`}>
           <motion.p 
           variants={textVariant()} 
           className={`${styles.heroHeadText} text-zinc-800 dark:text-slate-200`}>
@@ -31,7 +31,7 @@ export const Members = () => {
         <div className={`sm:hidden flex justify-center`}>
           <SelectBox items={members} name={currentName} />
           <select 
-          className='p-2 w-[300px]'
+          className='p-2 w-[300px] rounded-xl'
           onClick={onClickHandling} 
           >
             {members.map((members, i) => (
