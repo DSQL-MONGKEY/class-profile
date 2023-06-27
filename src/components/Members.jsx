@@ -9,7 +9,8 @@ import { useState } from "react"
 
 export const Members = () => {
   const [currentName, setCurrentName] = useState('')
-  const buttonHandling = (e) => {
+
+  const onClickHandling = (e) => {
     console.log(e.target.value)
     setCurrentName(e.target.value)
   }
@@ -27,8 +28,18 @@ export const Members = () => {
           <Card items={members} name={currentName} />
         </div>
 
-        <div className={`sm:hidden`}>
-          <SelectBox items={members} />
+        <div className={`sm:hidden flex justify-center`}>
+          <SelectBox items={members} name={currentName} />
+          <select 
+          className='p-2 w-[300px]'
+          onClick={onClickHandling} 
+          >
+            {members.map((members, i) => (
+              <option value={members.name} key={i}>
+                  {members.name}
+              </option>
+            ))}
+        </select>
         </div>         
 
         <div className={`hidden sm:flex flex-wrap gap-3 sm:justify-evenly p-5 rounded-full font-semibold`}>
@@ -38,7 +49,7 @@ export const Members = () => {
               key={i} 
               id={member.name} 
               value={member.name} 
-              onClick={buttonHandling}
+              onClick={onClickHandling}
               className={`text-zinc-400 text-[20px] hover:text-cyan-500 focus:text-pink-500`}
               >
                 {member.name}

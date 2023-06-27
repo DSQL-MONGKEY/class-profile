@@ -3,7 +3,7 @@ import { styles } from '../style'
 
 export const Card = ({ items, name }) => {
 
-  const nameSelected = () => (
+  const selectedName = () => (
     items.filter((item) => item.name == name).map((named, i) => (
       <div key={i} className=''>
         <img 
@@ -21,7 +21,7 @@ export const Card = ({ items, name }) => {
   return (
     <div className={`w-[350px] h-[350px] flex flex-col gap-2 justify-center items-center`}>
       <div className={`image-card`}>
-        {nameSelected()}
+        {selectedName()}
       </div>
     </div>
   )
